@@ -1,0 +1,332 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgba(34, 17, 55, 1);
+  position: relative;
+}
+
+.circle {
+  background-color: rgba(236, 143, 58, 1);
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(75%);
+  filter: blur(150px);
+  margin-top: 0%;
+  width: 120%;
+  height: 30%;
+  border-radius: 50%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: rgba(208, 193, 228, 1);
+  padding: 10px 20px;
+}
+
+#logo {
+  margin-right: auto;
+  width: 200px;
+}
+
+#home {
+  margin-left: 15px;
+}
+
+.navEl {
+  background-color: whitesmoke;
+  margin: 0 5px;
+  text-decoration: none;
+  padding: 5px 15px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  color: black;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#adddepart {
+  margin-right: auto;
+}
+
+.navEl:hover {
+  background-color: rgba(34, 17, 55, 1);
+  border: 2px solid black;
+  color: white;
+  box-shadow: 1px 3px 25px 0.2px rgb(85, 57, 146);
+}
+
+#home,
+#departments,
+#interns,
+#adddepart,
+#internships {
+  height: 35px;
+  margin: 0 20px;
+  min-width: fit-content;
+  width: 90px;
+  border: solid 2px;
+  font-size: 15px;
+  background-color: whitesmoke;
+  color: black;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#home:hover,
+#departments:hover,
+#interns:hover,
+#adddepart:hover,
+#internships:hover {
+  background-color: rgba(34, 17, 55, 1);
+  border: 2px solid black;
+  color: white;
+  box-shadow: 1px 3px 25px 0.2px rgb(85, 57, 146);
+}
+
+#logo {
+  background-color: whitesmoke;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 2px;
+  text-align: center;
+  max-width: 150px;
+  height: 35px;
+  font-family: "Montserrat";
+  margin-left: 20px;
+  cursor: pointer;
+  color: black;
+}
+
+#logo:hover {
+  background-color: rgba(34, 17, 55, 1);
+  border: 2px solid black;
+  color: white;
+  box-shadow: 1px 3px 25px 0.2px rgb(85, 57, 146);
+}
+
+a {
+  text-decoration: none;
+}
+
+#listTxt {
+  color: white;
+  text-align: center;
+  font-size: 35px;
+  font-family: "Montserrat", sans-serif;
+}
+#listTxt {
+  margin: 60px auto;
+  color: white;
+  font-size: 50px;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  height: 50px;
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.copyright p {
+  font-family: "Montserrat";
+  color: white;
+  font-size: 16px;
+  margin: 0;
+}
+table {
+  border-collapse: collapse;
+  width: 80%;
+  margin: 20px auto;
+}
+
+th {
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  padding: 8px;
+  border: 5px solid rgba(208, 193, 228, 1);
+}
+
+td {
+  color: white;
+  padding: 8px;
+  text-align: left;
+  border: 5px solid rgba(208, 193, 228, 1);
+  align-items: center;
+}
+
+.btn {
+  margin: 0 5px 0 5px;
+  border-radius: 5px;
+  height: 30px;
+  width: 60px;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: rgba(208, 193, 228, 1);
+  border: 2px solid black;
+  color: rgb(0, 0, 0);
+  box-shadow: 1px 3px 25px 0.2px rgb(85, 57, 146);
+}
+
+#btn1 {
+  margin-right: 15px;
+}
+#btn2 {
+  margin-left: 15px;
+}
+
+table {
+  width: 95%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  padding: 10px;
+  border: 6px solid rgba(208, 193, 228, 1);
+}
+
+table th,
+table td {
+  border: 6px solid rgba(208, 193, 228, 1);
+  padding: 12px;
+  text-align: center;
+}
+.Logout {
+  height: 35px;
+  width: 100px;
+  font-size: 15px;
+  border-radius: 10px;
+  display: block;
+}
+.hidden {
+  display: none;
+}
+button:hover {
+  cursor: pointer;
+  color: white;
+  background-color: red;
+}
+#logobut {
+  margin-right: auto;
+}
+
+.Logout {
+  margin-left: 20px;
+}
+@media screen and (max-width: 1000px) {
+  .navbar {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px;
+    align-items: center;
+  }
+  #home,
+  #logo,
+  #departments,
+  #interns,
+  #internships,
+  #adddepart,
+  .Logout {
+    width: 150px;
+    margin: auto;
+  }
+  .Logout {
+    margin: 0 20px;
+    margin: auto;
+  }
+  .useless {
+    display: none;
+  }
+  .scrolling-container {
+    margin-bottom: 100px;
+  }
+  footer {
+    bottom: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    padding: 10px;
+    width: 100%;
+    height: auto;
+  }
+
+  .copyright {
+    text-align: center;
+  }
+
+  .copyright p {
+    font-family: "Montserrat";
+    color: white;
+    font-size: 16px;
+    margin: 0;
+    padding: 10px;
+  }
+  #newDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 2px black;
+    border-radius: 5px;
+    width: 30px;
+    height: 32px;
+    padding: auto;
+    cursor: pointer;
+  }
+  #newDiv:hover {
+    background-color: black;
+    color: white;
+  }
+  .hidenav {
+    display: none;
+  }
+  .Logout {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1001px) {
+  #logobut {
+    background-color: whitesmoke;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px;
+    text-align: center;
+    max-width: 150px;
+    height: 35px;
+    font-family: "Montserrat";
+    margin-left: 20px;
+    cursor: pointer;
+    color: black;
+    padding: 0 10px;
+  }
+  #logobut:hover {
+    background-color: rgba(34, 17, 55, 1);
+    border: 2px solid black;
+    color: white;
+    box-shadow: 1px 3px 25px 0.2px rgb(85, 57, 146);
+  }
+}

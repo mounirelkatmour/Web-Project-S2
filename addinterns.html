@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="addinterns.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Interns</title>
+  </head>
+  <body>
+    <header>
+    </header>
+    <div class="content-container">
+      <main>
+        <div class="circle"></div>
+        <div class="actions">
+          <h2>Add Intern</h2>
+          <form id="addDepartmentForm" method="post" action="add.php">
+            <label for="First_Name">First Name</label>
+            <input
+              type="text"
+              id="First_Name"
+              name="First_Name"
+              placeholder="Enter your first name ..."
+              required
+            />
+            <br />
+            <label for="Last_Name">Last Name</label>
+            <input
+              type="text"
+              id="Last_Name"
+              name="Last_Name"
+              placeholder="Enter your last name ..."
+              required
+            />
+            <br />
+            <label for="Birthdate">Birthdate</label>
+            <input type="date" id="Birthdate" name="Birthdate" required />
+            <br />
+            <button type="submit">Add</button>
+          </form>
+        </div>
+      </main>
+    </div>
+
+    <script>
+      var i = 0;
+      function addInputField(button) {
+        if (i == 0) {
+          i++;
+          var FN = document.createElement("input");
+          FN.type = "text";
+          FN.name = "First_Name";
+          FN.placeholder = "FIRST NAME";
+          FN.classList.add("edit-field");
+          applyStyles(FN);
+
+          var LN = document.createElement("input");
+          LN.type = "text";
+          LN.name = "Last_Name";
+          LN.placeholder = "LAST NAME";
+          LN.classList.add("edit-field");
+          applyStyles(LN);
+
+          var Birthdate = document.createElement("input");
+          Birthdate.type = "date";
+          Birthdate.name = "Birthdate";
+          Birthdate.placeholder = "BIRTHDATE";
+          Birthdate.classList.add("edit-field");
+          applyStyles(Birthdate);
+          button.parentNode.insertBefore(FN, button);
+          button.parentNode.insertBefore(LN, button);
+          button.parentNode.insertBefore(Birthdate, button);
+        } else {
+          var form = button.closest("form");
+          form.submit();
+        }
+      }
+      function applyStyles(element) {
+        var style = `
+                padding: 4px;
+                margin-right: 5px;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+                font-size: 14px;
+            `;
+        element.style.cssText = style;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="welcome.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestagiaire.ma - welcome</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: rgba(34, 17, 55, 1);
+        position: relative;
+      }
+
+      .circle {
+        background-color: rgba(236, 143, 58, 1);
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%) translateY(75%);
+        filter: blur(150px);
+        margin-top: 0%;
+        width: 120%;
+        height: 30%;
+        border-radius: 50%;
+        z-index: -1;
+        overflow: hidden;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(208, 193, 228, 1);
+        padding: 10px 20px;
+      }
+
+      #home {
+        margin-left: 15px;
+      }
+      .hidden {
+        display: none;
+      }
+      .navEl {
+        background-color: whitesmoke;
+        margin: 0 5px;
+        text-decoration: none;
+        padding: 5px 15px;
+        border: 2px solid transparent;
+        border-radius: 10px;
+        color: black;
+        transition: all 0.3s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #addintern {
+        margin-right: auto;
+      }
+
+      .navEl:hover {
+        background-color: rgba(34, 17, 55, 1);
+        border: 2px solid black;
+        color: white;
+        box-shadow: 1px 3px 25px 0.2px rgb(85, 57, 146);
+      }
+
+      #listTxt {
+        color: white;
+        text-align: center;
+        font-size: 35px;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      #home,
+      #departments,
+      #interns,
+      #addintern,
+      #internships {
+        height: 35px;
+        margin: 0 20px;
+        min-width: fit-content;
+        width: 90px;
+        border: solid 2px;
+        font-size: 15px;
+        background-color: whitesmoke;
+        color: black;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+
+      #home:hover,
+      #departments:hover,
+      #interns:hover,
+      #addintern:hover,
+      #internships:hover {
+        background-color: rgba(34, 17, 55, 1);
+        border: 2px solid black;
+        color: white;
+        box-shadow: 1px 3px 25px 0.2px rgb(85, 57, 146);
+      }
+
+      #logo {
+        background-color: whitesmoke;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: solid 2px;
+        text-align: center;
+        max-width: 150px;
+        height: 35px;
+        font-family: "Montserrat";
+        margin-left: 20px;
+        cursor: pointer;
+        color: black;
+      }
+
+      #listTxt {
+        margin: 60px auto;
+        color: white;
+        font-size: 50px;
+      }
+
+      #logo:hover {
+        background-color: rgba(34, 17, 55, 1);
+        border: 2px solid black;
+        color: white;
+        box-shadow: 1px 3px 25px 0.2px rgb(85, 57, 146);
+      }
+
+      a {
+        text-decoration: none;
+      }
+      .navbar a {
+        color: black;
+      }
+      .navbar a:hover {
+        color: white;
+      }
+      .welcometxt {
+        color: white;
+        text-align: center;
+        font-size: 38px;
+        margin: 40px 20px;
+        font-family: "Montserrat";
+      }
+
+      footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: black;
+        height: 50px;
+      }
+
+      .copyright {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+
+      .copyright p {
+        font-family: "Montserrat";
+        color: white;
+        font-size: 16px;
+        margin: 0;
+      }
+
+      a {
+        text-decoration: none;
+      }
+      .Logout {
+        height: 35px;
+        width: 100px;
+        font-size: 15px;
+        border-radius: 10px;
+        display: block;
+      }
+
+      button:hover {
+        cursor: pointer;
+        color: white;
+        background-color: red;
+      }
+      .scrolling-container {
+        display: flex;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      .marquee-content {
+        display: flex;
+        animation: scroll-left 350s linear infinite;
+      }
+      .marque {
+        display: inline-block;
+        text-align: center;
+        margin: 0 150px;
+      }
+      .marque img {
+        display: block;
+        margin: 0 auto;
+        width: 600px;
+        height: 400px;
+        border-radius: 10px;
+        border: 2px solid black;
+      }
+      .marque h3 {
+        margin: 10px 0 0 0;
+        color: white;
+      }
+
+      @keyframes scroll-left {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-100%);
+        }
+      }
+      @media screen and (max-width: 811px) {
+        .navbar {
+          width: 100%;
+          height: auto;
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 5px;
+          align-items: center;
+        }
+        #home,
+        #logo,
+        #departments,
+        #interns,
+        #internships,
+        .Logout {
+          width: 150px;
+          margin: auto;
+        }
+        .Logout {
+          margin: 0 20px;
+          margin: auto;
+        }
+        .useless {
+          display: none;
+        }
+        .scrolling-container {
+          margin-bottom: 100px;
+        }
+        footer {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: black;
+          padding: 10px;
+          width: 100%;
+          height: auto;
+        }
+
+        .copyright {
+          text-align: center;
+        }
+
+        .copyright p {
+          font-family: "Montserrat";
+          color: white;
+          font-size: 16px;
+          margin: 0;
+          padding: 10px;
+        }
+        #newDiv {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: solid 2px black;
+          border-radius: 5px;
+          width: 30px;
+          height: 32px;
+          padding: auto;
+          cursor: pointer;
+        }
+        #newDiv:hover {
+          background-color: black;
+          color: white;
+        }
+        .hidenav {
+          display: none;
+        }
+        .Logout {
+          margin-bottom: 20px;
+        }
+      }
+      @media screen and (min-width: 811.9px) {
+        #logobut {
+          background-color: whitesmoke;
+          border-radius: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: solid 2px;
+          text-align: center;
+          max-width: 150px;
+          height: 35px;
+          font-family: "Montserrat";
+          margin-left: 20px;
+          cursor: pointer;
+          color: black;
+          padding: 0 10px;
+        }
+        #logobut:hover {
+          background-color: rgba(34, 17, 55, 1);
+          border: 2px solid black;
+          color: white;
+          box-shadow: 1px 3px 25px 0.2px rgb(85, 57, 146);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="circle"></div>
+    <div class="navbar">
+      <div id="newDiv" class="hidden">☰</div>
+      <a href="welcome.html" id="logobut" class="NavEl">Gestagiaire.ma</a>
+      <div class="useless" style="flex-grow: 1"></div>
+      <a href="welcome.html" class="navEl" id="home">Home</a>
+      <a href="depart.php" class="navEl" id="departments">Departements</a>
+      <a href="interns.php" class="navEl" id="interns">Interns</a>
+      <a href="internship.php" class="navEl" id="internships">Internships</a>
+      <button class="Logout" onclick="location.href='logout.php'">
+        Log Out
+      </button>
+    </div>
+    <p class="welcometxt">Welcome back to Gestagiaire.ma</p>
+    <div class="scrolling-container">
+      <div class="marquee-content">
+        <a class="marque" href="interns.php">
+          <img src="background.jpg" alt="pic1" />
+          <h3>Interns</h3>
+        </a>
+        <a class="marque" href="depart.php">
+          <img
+            src="image-company.png"
+            alt="pic2"
+            style="width: 400px; height: 400px"
+          />
+          <h3>Departments</h3>
+        </a>
+        <a class="marque" href="internship.php">
+          <img src="internship.jpg" alt="pic3" />
+          <h3>Internships</h3>
+        </a>
+        <a class="marque" href="interns.php">
+          <img src="background.jpg" alt="pic1" />
+          <h3>Interns</h3>
+        </a>
+        <a class="marque" href="depart.php">
+          <img
+            src="image-company.png"
+            alt="pic2"
+            style="width: 400px; height: 400px"
+          />
+          <h3>Departments</h3>
+        </a>
+        <a class="marque" href="internship.php">
+          <img src="internship.jpg" alt="pic3" />
+          <h3>Internships</h3>
+        </a>
+        <a class="marque" href="interns.php">
+          <img src="background.jpg" alt="pic1" />
+          <h3>Interns</h3>
+        </a>
+        <a class="marque" href="depart.php">
+          <img
+            src="image-company.png"
+            alt="pic2"
+            style="width: 400px; height: 400px"
+          />
+          <h3>Departments</h3>
+        </a>
+        <a class="marque" href="internship.php">
+          <img src="internship.jpg" alt="pic3" />
+          <h3>Internships</h3>
+        </a>
+        <a class="marque" href="interns.php">
+          <img src="background.jpg" alt="pic1" />
+          <h3>Interns</h3>
+        </a>
+        <a class="marque" href="depart.php">
+          <img
+            src="image-company.png"
+            alt="pic2"
+            style="width: 400px; height: 400px"
+          />
+          <h3>Departments</h3>
+        </a>
+        <a class="marque" href="internship.php">
+          <img src="internship.jpg" alt="pic3" />
+          <h3>Internships</h3>
+        </a>
+        <a class="marque" href="interns.php">
+          <img src="background.jpg" alt="pic1" />
+          <h3>Interns</h3>
+        </a>
+        <a class="marque" href="depart.php">
+          <img
+            src="image-company.png"
+            alt="pic2"
+            style="width: 400px; height: 400px"
+          />
+          <h3>Departments</h3>
+        </a>
+        <a class="marque" href="internship.php">
+          <img src="internship.jpg" alt="pic3" />
+          <h3>Internships</h3>
+        </a>
+        <a class="marque" href="interns.php">
+          <img src="background.jpg" alt="pic1" />
+          <h3>Interns</h3>
+        </a>
+        <a class="marque" href="depart.php">
+          <img
+            src="image-company.png"
+            alt="pic2"
+            style="width: 400px; height: 400px"
+          />
+          <h3>Departments</h3>
+        </a>
+        <a class="marque" href="internship.php">
+          <img src="internship.jpg" alt="pic3" />
+          <h3>Internships</h3>
+        </a>
+        <a class="marque" href="interns.php">
+          <img src="background.jpg" alt="pic1" />
+          <h3>Interns</h3>
+        </a>
+        <a class="marque" href="depart.php">
+          <img
+            src="image-company.png"
+            alt="pic2"
+            style="width: 400px; height: 400px"
+          />
+          <h3>Departments</h3>
+        </a>
+        <a class="marque" href="internship.php">
+          <img src="internship.jpg" alt="pic3" />
+          <h3>Internships</h3>
+        </a>
+        <a class="marque" href="interns.php">
+          <img src="background.jpg" alt="pic1" />
+          <h3>Interns</h3>
+        </a>
+        <a class="marque" href="depart.php">
+          <img
+            src="image-company.png"
+            alt="pic2"
+            style="width: 400px; height: 400px"
+          />
+          <h3>Departments</h3>
+        </a>
+        <a class="marque" href="internship.php">
+          <img src="internship.jpg" alt="pic3" />
+          <h3>Internships</h3>
+        </a>
+        <a class="marque" href="interns.php">
+          <img src="background.jpg" alt="pic1" />
+          <h3>Interns</h3>
+        </a>
+        <a class="marque" href="depart.php">
+          <img
+            src="image-company.png"
+            alt="pic2"
+            style="width: 400px; height: 400px"
+          />
+          <h3>Departments</h3>
+        </a>
+        <a class="marque" href="internship.php">
+          <img src="internship.jpg" alt="pic3" />
+          <h3>Internships</h3>
+        </a>
+        <a class="marque" href="interns.php">
+          <img src="background.jpg" alt="pic1" />
+          <h3>Interns</h3>
+        </a>
+        <a class="marque" href="depart.php">
+          <img
+            src="image-company.png"
+            alt="pic2"
+            style="width: 400px; height: 400px"
+          />
+          <h3>Departments</h3>
+        </a>
+        <a class="marque" href="internship.php">
+          <img src="internship.jpg" alt="pic3" />
+          <h3>Internships</h3>
+        </a>
+        <a class="marque" href="interns.php">
+          <img src="background.jpg" alt="pic1" />
+          <h3>Interns</h3>
+        </a>
+        <a class="marque" href="depart.php">
+          <img
+            src="image-company.png"
+            alt="pic2"
+            style="width: 400px; height: 400px"
+          />
+          <h3>Departments</h3>
+        </a>
+        <a class="marque" href="internship.php">
+          <img src="internship.jpg" alt="pic3" />
+          <h3>Internships</h3>
+        </a>
+        <a class="marque" href="interns.php">
+          <img src="background.jpg" alt="pic1" />
+          <h3>Interns</h3>
+        </a>
+        <a class="marque" href="depart.php">
+          <img
+            src="image-company.png"
+            alt="pic2"
+            style="width: 400px; height: 400px"
+          />
+          <h3>Departments</h3>
+        </a>
+        <a class="marque" href="internship.php">
+          <img src="internship.jpg" alt="pic3" />
+          <h3>Internships</h3>
+        </a>
+        <a class="marque" href="interns.php">
+          <img src="background.jpg" alt="pic1" />
+          <h3>Interns</h3>
+        </a>
+        <a class="marque" href="depart.php">
+          <img
+            src="image-company.png"
+            alt="pic2"
+            style="width: 400px; height: 400px"
+          />
+          <h3>Departments</h3>
+        </a>
+        <a class="marque" href="internship.php">
+          <img src="internship.jpg" alt="pic3" />
+          <h3>Internships</h3>
+        </a>
+        <a class="marque" href="interns.php">
+          <img src="background.jpg" alt="pic1" />
+          <h3>Interns</h3>
+        </a>
+        <a class="marque" href="depart.php">
+          <img
+            src="image-company.png"
+            alt="pic2"
+            style="width: 400px; height: 400px"
+          />
+          <h3>Departments</h3>
+        </a>
+        <a class="marque" href="internship.php">
+          <img src="internship.jpg" alt="pic3" />
+          <h3>Internships</h3>
+        </a>
+      </div>
+    </div>
+  </body>
+  <footer>
+    <div class="copyright">
+      <p>
+        Copyright &copy;2024 Gestagiaire. Made by Mounir Elkatmour and Akram
+        Elbahar.
+      </p>
+    </div>
+  </footer>
+  <script>
+    var x = 0;
+
+    function checkMediaQuery() {
+      if (window.innerWidth <= 811) {
+        document.getElementById("newDiv").classList.remove("hidden");
+        x = 1;
+      } else {
+        document.getElementById("newDiv").classList.add("hidden");
+        x = 0;
+      }
+
+      var navElements = document.querySelectorAll(
+        ".navbar a, #logobut, .Logout"
+      );
+
+      function changeClass() {
+        navElements.forEach(function (element) {
+          element.classList.toggle("hidenav");
+        });
+      }
+
+      changeClass();
+    }
+
+    window.addEventListener("resize", checkMediaQuery);
+    window.addEventListener("load", checkMediaQuery);
+
+    document.getElementById("newDiv").addEventListener("click", function () {
+      var logout = document.querySelector(".Logout");
+      var navElements = document.querySelectorAll(
+        "#logo, #home, #departments, #interns, #internships, .Logout"
+      );
+
+      if (x == 1) {
+        logout.classList.remove("hidenav");
+        navElements.forEach(function (element) {
+          element.classList.remove("hidenav");
+        });
+        x = 0;
+      } else {
+        logout.classList.add("hidenav");
+        navElements.forEach(function (element) {
+          element.classList.add("hidenav");
+        });
+        x = 1;
+      }
+    });
+  </script>
+</html>

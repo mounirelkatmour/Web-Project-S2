@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="adddepart.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Departements</title>
+  </head>
+  <body>
+    <div class="content-container">
+      <main>
+        <div class="circle"></div>
+
+        <div class="actions">
+          <h2 class="addtxt">Add Departements</h2>
+          <form id="addDepartmentForm" method="post" action="adddepart.php">
+            <label for="name_depart">Departement name</label>
+            <input
+              type="text"
+              id="name_depart"
+              name="name_depart"
+              placeholder="Enter departement's name ..."
+              required
+            />
+            <br />
+            <button type="submit">Add</button>
+          </form>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

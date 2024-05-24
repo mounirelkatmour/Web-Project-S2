@@ -1,0 +1,301 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: rgba(34, 17, 55, 1);
+  position: relative;
+}
+.circle {
+  background-color: rgba(236, 143, 58, 1);
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(75%);
+  filter: blur(150px);
+  margin-top: 0%;
+  width: 120%;
+  height: 30%;
+  border-radius: 50%;
+  z-index: -1;
+  overflow: hidden;
+}
+.form {
+  background-color: rgba(219, 196, 255, 1);
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -122%);
+  z-index: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 300px;
+  height: 285px;
+  border-radius: 25px;
+  box-shadow: 1px 3px 35px 0.2px rgb(188, 172, 223);
+  transition: all 0.3s ease;
+}
+#LoginToGestagiaire {
+  text-align: center;
+  color: white;
+  font-family: "Montserrat";
+  font-size: xx-large;
+  padding: 20px 0 20px;
+}
+.icon {
+  width: 20px;
+  margin-right: 10px;
+}
+label[for="Login"],
+label[for="Password"] {
+  display: none;
+}
+.form div {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+}
+input[type="text"],
+input[type="password"] {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 3px solid white;
+  background-color: transparent;
+  outline: none;
+}
+.inpPass,
+.inpUser {
+  transform: translateY(-50%);
+  margin-bottom: 20px;
+}
+
+.inpUser input,
+.inpPass input {
+  width: 215px;
+  height: 30px;
+}
+.inpUser img,
+.inpPass img {
+  width: 20px;
+  padding-top: -5px;
+}
+
+#inp1:focus,
+#inp2:focus {
+  border-bottom: 3px solid rgb(85, 57, 146);
+  background-color: transparent;
+}
+.newcheckbox {
+  transform: translateY(-100%);
+  cursor: pointer;
+}
+#rememberCheckbox {
+  cursor: pointer;
+}
+
+.errormsg {
+  color: rgb(179, 57, 57);
+  font-weight: bold;
+  font-size: 16px;
+  margin: 10px auto;
+  text-align: center;
+  background-color: rgba(219, 196, 255, 1);
+  border-radius: 20px;
+  width: 300px;
+  padding: 10px;
+  margin-top: 30px;
+}
+
+#RememberMe {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: rgb(62, 62, 62);
+}
+
+@keyframes wave-46 {
+  50% {
+    transform: scale(0.9);
+  }
+}
+
+.submit {
+  display: flex;
+  justify-content: center;
+  transform: translateY(130%);
+}
+
+.button {
+  height: 40px;
+  width: 160px;
+  border-radius: 30px;
+  border: none;
+  margin-top: -30px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: larger;
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: 1px 3px 25px 0.2px rgb(85, 57, 146);
+  transition: all 0.4s ease-in-out;
+}
+.button:hover {
+  background-color: rgb(85, 57, 146);
+  color: #ffffff;
+  box-shadow: 1px 3px 22px 1.5px rgb(0, 0, 0);
+}
+.company {
+  display: flex;
+  justify-content: center;
+  margin-top: 380px;
+}
+.company img {
+  width: 300px;
+  height: 285px;
+  border-radius: 25px;
+  box-shadow: 1px 3px 25px 0.2px rgb(0, 0, 0);
+  transition: all 0.3s ease;
+}
+.script p,
+.script h3 {
+  margin: 45px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 300px;
+  color: #ffffff;
+  margin: 10px auto 0;
+}
+.script {
+  margin-top: 50px;
+  transition: all 0.3s ease;
+}
+footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  color: white;
+  margin-top: 40px;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  height: 50px;
+  content: "";
+}
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: black;
+  height: 50px;
+  color: white;
+  line-height: 50px;
+}
+
+.copyright p {
+  font-size: 20px;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  justify-items: center;
+}
+
+@media only screen and (max-width: 652px) {
+  .copyright p {
+    font-size: 15px;
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 494px) {
+  .copyright p {
+    font-size: 12px;
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #LoginToGestagiaire {
+    font-size: 40px;
+  }
+  .form {
+    width: 400px;
+    height: 290px;
+    margin-top: 20px;
+  }
+  .inpPass input,
+  .inpUser input {
+    width: 315px;
+  }
+  .button {
+    scale: 1.1;
+  }
+  .company img {
+    width: 400px;
+    height: 400px;
+    margin-top: 50px;
+  }
+  .script {
+    font-size: xx-large;
+    margin-top: 75px;
+  }
+  .script p {
+    width: 500px;
+  }
+  footer {
+    margin-top: 80px;
+    height: 80px;
+  }
+  footer div p {
+    font-size: 23px;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .page {
+    column-count: 2;
+    column-gap: 20px;
+  }
+  .company img {
+    transform: translateX(-190%);
+  }
+  .form {
+    transform: translateX(50%) translateY(-1%);
+    height: 400px;
+  }
+  .newcheckbox {
+    transform: translateY(240%) translateX(7%);
+    scale: 1.1;
+  }
+  .inpUser {
+    transform: translateY(30%);
+  }
+  .inpPass {
+    transform: translateY(130%);
+  }
+  .button {
+    transform: translateY(220%);
+    scale: 1.2;
+  }
+  .script {
+    margin-top: 150px;
+  }
+  .script p {
+    width: 800px;
+  }
+  .submit {
+    transform: translateY(-100%);
+  }
+}
+.errormsg {
+  color: rgb(179, 57, 57);
+  font-weight: bold;
+  font-size: 16px;
+  margin: 10px auto;
+  text-align: center;
+  background-color: rgba(219, 196, 255, 1);
+  border-radius: 20px;
+  width: 300px;
+  padding: 10px;
+  margin-top: 30px;
+}
